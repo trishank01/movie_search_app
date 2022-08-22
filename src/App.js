@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Starred from "./pages/Starred";
 import About from "./pages/About";
+import Show from "./pages/Show";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route exact path="/about">
           <About />
         </Route>
+
+         <Route exact path="/show/:id">
+         <Show />
+         </Route>
 
         <Route>this is 404 page</Route>
       </Switch>

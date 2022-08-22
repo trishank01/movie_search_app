@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Actorgrid from "../components/actor/ActorGrid";
 import MainPageLayout from "../components/MainPageLayout";
 import ShowGrid from '../components/show/ShowGrid';
@@ -11,6 +11,13 @@ const Home = () => {
   const [searchOption, setSearchOption] = useState("shows");
 
   const isShowsSearch = searchOption === "shows";
+
+  // useEffect(() =>{
+  //   console.log('use effect run');
+  //   return () => {
+  //     console.log('exit')
+  //   }
+  // } , [])
 
   const onInputChange = (ev) => {
     setInput(ev.target.value);
@@ -45,7 +52,6 @@ const Home = () => {
   const onRadioChange = (ev) => {
     setSearchOption(ev.target.value);
   };
-  console.log(searchOption);
 
   return (
     <MainPageLayout>
