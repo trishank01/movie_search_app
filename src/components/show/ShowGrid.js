@@ -2,10 +2,10 @@ import React from "react";
 import ShowCard from "./ShowCard";
 import IMAGE_NOT_FOUND from "../../images/not-found.png";
 import { FlexGrid } from "../Styled";
-import { useShow } from "../../misc/custom-hooks";
+import { useShows } from "../../misc/custom-hooks";
 
 const ShowGrid = ({ data }) => {
-  const [starredShows, dispatchStaeed] = useShow()
+  const [starredShows, dispatchStaeed] = useShows()
   return (
     <FlexGrid>
       {data.map(({ show }) => {
